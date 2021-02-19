@@ -78,8 +78,8 @@
         <% recording_links = "" %>
         <% p = recording[:playbacks].each do |p| recording_links.concat(p[:url] + "\n\n") if p.key?(:length) end %>
         <% if p %>
-          <a class="dropdown-item" href="/download/presentation/<%= recording[:recordID] %>/<%= recording[:recordID] %>.mp4"><i class="dropdown-icon fas fa-download"></i>Download MP4 Video (komplett)</a>
-          <a class="dropdown-item" href="/download/presentation/<%= recording[:recordID] %>/simple-<%= recording[:recordID] %>.mp4"><i class="dropdown-icon fas fa-download"></i>Download MP4 Video (einfach)</a>
+          <a class="dropdown-item" href="/download/presentation/<%= recording[:recordID] %>/<%= recording[:recordID] %>.mp4" download><i class="dropdown-icon fas fa-download"></i>Download MP4 Video (komplett)</a>
+          <a class="dropdown-item" href="/download/presentation/<%= recording[:recordID] %>/simple-<%= recording[:recordID] %>.mp4" download><i class="dropdown-icon fas fa-download"></i>Download MP4 Video (einfach)</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item email-link" data-pres-link="<%= recording_links %>"><i class="dropdown-icon far fa-envelope"></i> <%= t("recording.email") %></a>
           <div class="dropdown-divider"></div>
