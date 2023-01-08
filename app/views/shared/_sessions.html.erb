@@ -69,7 +69,9 @@
                       ↑
                     <% end %>
                   </th>
-                  <% unless only_public %>
+                  <% if only_public || (defined?(shared_room) && shared_room) %>
+                    <th class="text-center">Downloads</th>
+                  <% else %>
                     <th class="text-center"><i class="icon-settings"></i></th>
                   <% end %>
                 </tr>
